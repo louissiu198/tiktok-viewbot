@@ -240,7 +240,7 @@ def GenerateService():
             errors += 1 
                 
 os.system("mode 100,25")
-TikTok.GenerateBanner(1)
+TikTok.GenerateScreen("1")
 videoId = input(Fore.LIGHTRED_EX + f"[>] {Fore.LIGHTGREEN_EX}VideoID  {Fore.RESET}")
 threadChoice = input(Fore.LIGHTRED_EX + f"[>] {Fore.LIGHTGREEN_EX}Threads  {Fore.RESET}")
 proxyChoice = input(Fore.LIGHTRED_EX + f"[>] {Fore.LIGHTGREEN_EX}If you dont have proxies (ENTER 1) if u have proxies and u put it in proxies.txt (ENTER 2){Fore.RESET}     ")
@@ -250,7 +250,7 @@ else:
     proxies = open("proxies.txt").read().splitlines()
     Option = True
 os.system('cls' if os.name == 'nt' else 'clear')
-TikTok.GenerateBanner(1)
+TikTok.GenerateScreen(1)
 print(Fore.LIGHTGREEN_EX + f'Sending Views ...')
 threading.Thread(target=TikTok.GenerateChecks).start()
 threading.Thread(target=TikTok.GenerateScreen, args=("2")).start()
