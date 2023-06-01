@@ -12,6 +12,7 @@ Thanks for pando#0001, Scrimx#5447, ImQua#2393, zuka#0196
 So if they sell's the bot it means it's a scam, they are just using my sources or devices
 
 ### How to use it
+```
 Download Python
 Open cmd and type "pip install -r requirements.txt" and enter
 Then type "python main.py" and enter
@@ -21,7 +22,7 @@ Then when they ask you about proxies
 If you have proxies, type 2,
 If you dont, type 1
 ENJOY, AND LEAVE A LIKE
-
+```
 ### If You sell them
 I won't care anymore, just put my name at the end, you can sell to anyone just don't get caught
 Don't buy from djukic, auut, amgxp, scrimx wasting some money
