@@ -1,5 +1,5 @@
 # Tikbot [Best Free TikTok Viewbot in the world] (DO NOT BUY VIEWBOT ANYMORE)
-# LEAVE A LIKE
+# ALL DEVICES DECRYPTED
 # LEAVE A LIKE
 Botting 400-600 views per seconds
 Created in pure python
