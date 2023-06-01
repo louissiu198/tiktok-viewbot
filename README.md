@@ -1,7 +1,7 @@
+# Tikbot [Best Free TikTok Viewbot in the world] (DO NOT BUY VIEWBOT ANYMORE)
 # NOTE !!!! devices.txt is in here (https://www.mediafire.com/file/bbcikicx5hgc3x2/devices.txt/file) The file was too big to upload here
 # 599K Devices, DONT BUY IT, IF THEIR DEVICES.TXT IS THE SAME AMOUNT AS US IN AROUND 599K ITS A SCAM
 # IT IS pando#0001, Scrimx#5447, ImQua#2393, zuka#0196 WHO CRACKED THE SCRIPT
-# Tikbot [Best Free TikTok Viewbot in the world] (DO NOT BUY VIEWBOT ANYMORE)
 # ALL DEVICES DECRYPTED
 # LEAVE A LIKE
 Botting 400-600 views per seconds
