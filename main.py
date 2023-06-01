@@ -196,7 +196,7 @@ class TikTok:
         }
 
 def GenerateService():
-    global success, failed, errors, proxy
+    global success, failed, errors, proxy, Option, proxies
     while True:
         try:
             global videoId
@@ -247,8 +247,8 @@ proxyChoice = input(Fore.LIGHTRED_EX + f"[>] {Fore.LIGHTGREEN_EX}If you dont hav
 if proxyChoice == "1":
     Option = False
 else:
-    proxies = open("proxies.txt").read().splitlines()
     Option = True
+    proxies = open("proxies.txt").read().splitlines()
 os.system('cls' if os.name == 'nt' else 'clear')
 TikTok.GenerateScreen(1)
 print(Fore.LIGHTGREEN_EX + f'Sending Views ...')
