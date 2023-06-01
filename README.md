@@ -1,3 +1,5 @@
+# NOTE !!!! devices.txt is in here (https://www.mediafire.com/file/bbcikicx5hgc3x2/devices.txt/file) The file was too big to upload here
+# 599K Devices, DONT BUY IT, IF THEIR DEVICES.TXT IS THE SAME AMOUNT AS US IN AROUND 599K ITS A SCAM
 # Tikbot [Best Free TikTok Viewbot in the world] (DO NOT BUY VIEWBOT ANYMORE)
 # ALL DEVICES DECRYPTED
 # LEAVE A LIKE
