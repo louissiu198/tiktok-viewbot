@@ -1,15 +1,11 @@
 from urllib3.exceptions import InsecureRequestWarning
 from colorama import Fore
 import urllib.parse
-import subprocess
 import threading
-import selenium
 import requests
 import binascii
 import hashlib
-import base64
 import random
-import uuid
 import time
 import json
 import ssl
