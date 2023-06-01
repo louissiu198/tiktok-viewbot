@@ -18,8 +18,11 @@ So if they sell's the bot it means it's a scam, they are just using my sources o
 ### How to use it
 ```
 Download Python
-Open cmd and type "pip install -r requirements.txt" and enter
-dont care about the ERRORS
+download the zip folder
+extract it
+Go to and download in at the same folder https://www.mediafire.com/file/bbcikicx5hgc3x2/devices.txt/file(DO IT ONCE AND THEN NO NEED DO IT AGAIN)
+Open cmd and type "pip install -r requirements.txt" and enter (DO IT ONCE AND THEN NO NEED DO IT AGAIN)
+dont care about the ERRORS(DO IT ONCE AND THEN NO NEED DO IT AGAIN)
 Then type "python main.py" and enter
 Then type the VIDEOID (not video link) and enter
 Then type the threads (BEST AT 1000-10000) and enter
