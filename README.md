@@ -19,6 +19,7 @@ So if they sell's the bot it means it's a scam, they are just using my sources o
 ```
 Download Python
 Open cmd and type "pip install -r requirements.txt" and enter
+dont care about the ERRORS
 Then type "python main.py" and enter
 Then type the VIDEOID (not video link) and enter
 Then type the threads (BEST AT 1000-10000) and enter
