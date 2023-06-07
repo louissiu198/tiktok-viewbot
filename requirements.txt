@@ -1,6 +1,0 @@
-colorama
-requests
-binascii
-hashlib
-random
-ssl
