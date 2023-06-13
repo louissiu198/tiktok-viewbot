@@ -1,3 +1,3 @@
 # Tikbot v1
 # Literally Slow and Shit and Patched
-# Buy v2 now join 
+# v2 also patched (wait for fix)
