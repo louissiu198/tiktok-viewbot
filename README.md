@@ -1,3 +1,3 @@
-# Tikbot v1
-# Literally Slow and Shit and Patched
-# v3 also patched (wait for fix, it would be paid xdd)
+# Tikbot v5
+New github link : https://github.com/louissiu198/unpatched-tiktok-viewbot
+Paid Viewbot
