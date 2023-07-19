@@ -11,88 +11,6 @@ import json
 import ssl
 import os 
 
-requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
-ssl._create_default_https_context = ssl._create_unverified_context
-
-Option = False
-devices = open("devices.txt").read().splitlines()
-domains = open("domains.txt").read().splitlines()
-
-seconds = 0
-success = 0
-failed = 0
-errors = 0
-counts = 0
-proxy = 0
-
-class signature:
-    def __init__(self, params: str, data: str, cookies: str) -> None:
-        self.params = params
-        self.data = data
-        self.cookies = cookies
-    def hash(self, data: str) -> str:
-        return str(hashlib.md5(data.encode()).hexdigest())
-    def get_base_string(self) -> str:
-        base_str = self.hash(self.params)
-        base_str = (base_str + self.hash(self.data) if self.data else base_str + str("0" * 32))
-        base_str = (base_str + self.hash(self.cookies) if self.cookies else base_str + str("0" * 32))
-        return base_str
-    def get_value(self) -> json:
-        return self.encrypt(self.get_base_string())
-    def encrypt(self, data: str) -> json:
-        unix = time.time()
-        len = 0x14
-        key = [0xDF,0x77,0xB9,0x40,0xB9,0x9B,0x84,0x83,0xD1,0xB9,0xCB,0xD1,0xF7,0xC2,0xB9,0x85,0xC3,0xD0,0xFB,0xC3,]
-        param_list = []
-        for i in range(0, 12, 4):
-            temp = data[8 * i : 8 * (i + 1)]
-            for j in range(4):
-                H = int(temp[j * 2 : (j + 1) * 2], 16)
-                param_list.append(H)
-        param_list.extend([0x0, 0x6, 0xB, 0x1C])
-        H = int(hex(int(unix)), 16)
-        param_list.append((H & 0xFF000000) >> 24)
-        param_list.append((H & 0x00FF0000) >> 16)
-        param_list.append((H & 0x0000FF00) >> 8)
-        param_list.append((H & 0x000000FF) >> 0)
-        eor_result_list = []
-        for A, B in zip(param_list, key):
-            eor_result_list.append(A ^ B)
-        for i in range(len):
-            C = self.reverse(eor_result_list[i])
-            D = eor_result_list[(i + 1) % len]
-            E = C ^ D
-            F = self.rbit_algorithm(E)
-            H = ((F ^ 0xFFFFFFFF) ^ len) & 0xFF
-            eor_result_list[i] = H
-        result = ""
-        for param in eor_result_list:
-            result += self.hex_string(param)
-        return {
-            "x-ss-req-ticket": str(int(unix * 1000)),
-            "x-khronos": str(int(unix)),
-            "x-gorgon": ("840480e90000" + result),  
-        }
-    def rbit_algorithm(self, num):
-        result = ""
-        tmp_string = bin(num)[2:]
-        while len(tmp_string) < 8:
-            tmp_string = "0" + tmp_string
-        for i in range(0, 8):
-            result = result + tmp_string[7 - i]
-        return int(result, 2)
-
-    def hex_string(self, num):
-        tmp_string = hex(num)[2:]
-
-        if len(tmp_string) < 2:
-            tmp_string = "0" + tmp_string
-        return tmp_string
-
-    def reverse(self, num):
-        tmp_string = self.hex_string(num)
-        return int(tmp_string[1:] + tmp_string[:1], 16)
-
 class TikTok:                       
     @staticmethod
     def GenerateBanner():
@@ -177,8 +95,6 @@ class TikTok:
             "sdk-version":"2",
             "user-agent":"com.zhiliaoapp.musically/2022903040 (Linux; U; Android 9; en_US; SM-G977N; Build/LMY48Z;tt-ok/3.12.13.1)",
             "x-argus":"iXezAlBdeoONxmYFYN7vi4wBB39kLVrgUvzvJWzOaRrSr8/Bbj777qHcPUQeKfgfKH7v94B6Cx3b8V6HpCzVKOSobKtOAIYccG+cQ4oVRgcvKo5oLqAD/0P2/VWs2yv5qXgF1sLxEqMg5i2CyDmFEcSUS8D7R08oG0z3RdMv6z5y0UXdYqKMyomJuqCc3xyLQr+RWaaWh7/kN1VfQQd67fJKUDqkfV6lwmssjOhvov1MLJu6q8K/pcfZwwRha9Z/xkSRSD8UYn9uRlQIy+fFUtxu",
-            "x-gorgon":signature["x-gorgon"],
-            "x-khronos":signature["x-khronos"],
             "x-ladon":"G2GCCV7qqfoOGszXlN4/yP1EViOEmP6wez1kTcy+5ArrTVi1",
             "x-ss-req-ticket":"1682927953076",
             "x-ss-stub":hashlib.md5(str(basePayload).encode()).hexdigest().upper(),
