@@ -1,3 +1,2 @@
-# Tikbot v5
-New github link : https://github.com/louissiu198/unpatched-tiktok-viewbot
-Paid Viewbot
+# VIEWBOT FUllY PATCHED (ARGUS, LADON, MSSDK)
+# Go to ZEFOY REPO WOULD UPDATE
